@@ -1,20 +1,100 @@
-*{
-          margin: 0;
-          padding: 0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
-          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d4e8ed;
     color: #000;
+}
+
+section {
+    max-width: 1200px; /* Center the content with a max width */
+    margin: 2rem auto; /* Center the section horizontally */
+    padding: 2rem;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: #1d1e25;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+/* Flexbox container for the testimonial cards */
+.testimonial-container {
+    display: flex;
+    justify-content: space-between; /* Space between cards */
+    flex-wrap: wrap; /* Stack cards on smaller screens */
+    gap: 1rem; /* Add space between cards */
+}
+
+/* Each testimonial box */
+.para-1 {
+    background: #fff;
+    border-radius: 8px; /* Rounded corners */
+    padding: 1.5rem;
+    width: 48%; /* Take 48% of the section width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+/* Stars at the top */
+.rating-icon {
+    color: rgb(10, 9, 9); /* Gold stars */
+    margin-bottom: 1rem;
+}
+
+/* Text inside the testimonial */
+.para-1 p {
     font-size: 1rem;
+    color: #333;
     line-height: 1.5;
+    margin-bottom: 1.5rem;
 }
-section{
-          background-color: #d4e8ed;
+
+/* Profile image, name, and job title */
+.testimonial-image-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between image and text */
 }
-.star {
-          color: rgb(22, 22, 18);
-          font-size: 24px;
- }
-      
-                             
-                            
+
+.testimonial-image-wrapper img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Circular profile image */
+    object-fit: cover;
+}
+
+.testimonial-image-wrapper h3 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.testimonial-image-wrapper p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0;
+}
+
+/* Logo at the bottom */
+.testimonial-logo {
+    margin-top: 1rem;
+    width: 80px;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .para-1 {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
